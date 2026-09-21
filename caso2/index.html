@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Cultural San José 2026 - Programación y Estado</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="header-festival">
+        <div class="header-content">
+            <h1>Festival Cultural San José 2026</h1>
+            <p class="meta-info">
+                <span>Parque La Sabana</span> | 
+                <span>20 de Setiembre, 2026</span> | 
+                <span>10:00 AM - 11:00 PM</span>
+            </p>
+        </div>
+
+        <!-- Navegación-->
+        <nav class="nav-festival" aria-label="Navegación del festival">
+            <ul>
+                <li><a href="#ahora" class="active">Ahora</a></li>
+                <li><a href="#cambios">Cambios</a></li>
+                <li><a href="#proximas">Próximas</a></li>
+                <li><a href="#escenarios">Programación</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="layout-festival">
+
+        <!-- Sección "Ahora" -->
+        <section id="ahora" class="seccion-bloque ahora-container">
+            <h2>En Este Momento</h2>
+            <div class="cards-ahora">
+
+                <article class="card-ahora">
+                    <span class="badge-en-vivo">EN VIVO</span>
+                    <div class="card-body">
+                        <span class="categoria cat-musica">Música</span>
+                        <h3>Los Viajeros</h3>
+                        <p class="escenario">Escenario Central</p>
+                        <time class="horario">14:00 - 15:00</time>
+                    </div>
+                </article>
+
+                <article class="card-ahora">
+                    <span class="badge-en-vivo">EN VIVO</span>
+                    <div class="card-body">
+                        <span class="categoria cat-teatro">Teatro</span>
+                        <h3>Comedia de la Rosa</h3>
+                        <p class="escenario">Teatro</p>
+                        <time class="horario">14:15 - 15:15</time>
+                    </div>
+                </article>
+
+                <article class="card-ahora">
+                    <span class="badge-en-vivo">EN VIVO</span>
+                    <div class="card-body">
+                        <span class="categoria cat-infantil">Infantil</span>
+                        <h3>Títeres del Bosque</h3>
+                        <p class="escenario">Zona Familiar</p>
+                        <time class="horario">14:00 - 14:45</time>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Cambios Importantes -->
+        <section id="cambios" class="seccion-bloque cambios-container">
+            <h2>Avisos y Cambios de Última Hora</h2>
+            <div class="lista-cambios">
+                <article class="aviso-card aviso-traslado">
+                    <span class="tipo-aviso">Traslado</span>
+                    <h3>Taller de Cerámica</h3>
+                    <p>Trasladado de Zona Cultural a Zona Familiar por espacio.</p>
+                </article>
+
+                <article class="aviso-card aviso-horario">
+                    <span class="tipo-aviso">Nuevo Horario</span>
+                    <h3>Ensamble de Jazz</h3>
+                    <p>Iniciará a las 16:30 en punto en el Escenario Central.</p>
+                </article>
+
+                <article class="aviso-card aviso-cancelado">
+                    <span class="tipo-aviso">Cancelación</span>
+                    <h3>Charla de Fotografía</h3>
+                    <p>Cancelada por indisposición del ponente.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Próximas Actividades -->
+        <section id="proximas" class="seccion-bloque proximas-container">
+            <h2>Próximas Actividades</h2>
+            <div class="lista-proximas">
+                <article class="item-proxima">
+                    <time>15:00</time>
+                    <div class="info-proxima">
+                        <h3>Danza Folclórica</h3>
+                        <p>Zona Cultural | <span class="cat-tag">Danza</span></p>
+                    </div>
+                </article>
+
+                <article class="item-proxima">
+                    <time>15:30</time>
+                    <div class="info-proxima">
+                        <h3>Rock Local</h3>
+                        <p>Escenario Central | <span class="cat-tag">Música</span></p>
+                    </div>
+                </article>
+
+                <article class="item-proxima">
+                    <time>16:00</time>
+                    <div class="info-proxima">
+                        <h3>Degustación Gastronómica</h3>
+                        <p>Zona Cultural | <span class="cat-tag">Gastronomía</span></p>
+                    </div>
+                </article>
+
+                <article class="item-proxima">
+                    <time>16:15</time>
+                    <div class="info-proxima">
+                        <h3>Magias y Sonrisas</h3>
+                        <p>Zona Familiar | <span class="cat-tag">Infantil</span></p>
+                    </div>
+                </article>
+
+                <article class="item-proxima">
+                    <time>17:00</time>
+                    <div class="info-proxima">
+                        <h3>Monólogo Abierto</h3>
+                        <p>Teatro | <span class="cat-tag">Teatro</span></p>
+                    </div>
+                </article>
+
+                <article class="item-proxima">
+                    <time>17:30</time>
+                    <div class="info-proxima">
+                        <h3>Panel: Arte Urbano</h3>
+                        <p>Zona Cultural | <span class="cat-tag">Conferencia</span></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Programación por Escenarios (CSS Grid en Escritorio) -->
+        <section id="escenarios" class="seccion-bloque escenarios-container">
+            <h2>Programación por Escenarios</h2>
+            <div class="grid-escenarios">
+
+                <!-- Escenario Central -->
+                <div class="col-escenario">
+                    <h3>Escenario Central</h3>
+                    <article class="slot-actividad pasado">
+                        <time>12:00 - 13:30</time>
+                        <h4>Banda Municipal</h4>
+                    </article>
+                    <article class="slot-actividad activo">
+                        <time>14:00 - 15:00</time>
+                        <h4>Los Viajeros</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>15:30 - 17:00</time>
+                        <h4>Rock Local</h4>
+                    </article>
+                </div>
+
+                <!-- Teatro -->
+                <div class="col-escenario">
+                    <h3>Teatro</h3>
+                    <article class="slot-actividad pasado">
+                        <time>12:30 - 13:30</time>
+                        <h4>Danza Contemporánea</h4>
+                    </article>
+                    <article class="slot-actividad activo">
+                        <time>14:15 - 15:15</time>
+                        <h4>Comedia de la Rosa</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>17:00 - 18:30</time>
+                        <h4>Monólogo Abierto</h4>
+                    </article>
+                </div>
+
+                <!-- Zona Cultural -->
+                <div class="col-escenario">
+                    <h3>Zona Cultural</h3>
+                    <article class="slot-actividad">
+                        <time>15:00 - 16:00</time>
+                        <h4>Danza Folclórica</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>16:00 - 17:00</time>
+                        <h4>Degustación Gastronómica</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>17:30 - 18:30</time>
+                        <h4>Panel: Arte Urbano</h4>
+                    </article>
+                </div>
+
+                <!-- Zona Familiar -->
+                <div class="col-escenario">
+                    <h3>Zona Familiar</h3>
+                    <article class="slot-actividad activo">
+                        <time>14:00 - 14:45</time>
+                        <h4>Títeres del Bosque</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>15:00 - 16:00</time>
+                        <h4>Taller de Cerámica</h4>
+                    </article>
+                    <article class="slot-actividad">
+                        <time>16:15 - 17:15</time>
+                        <h4>Magias y Sonrisas</h4>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Servicios Disponibles -->
+        <section id="servicios" class="seccion-bloque servicios-container">
+            <h2>Servicios del Festival</h2>
+            <div class="grid-servicios">
+                <article class="servicio-card">
+                    <h3>Alimentación</h3>
+                    <p>Food trucks y zona de picnic.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Baños</h3>
+                    <p>Ubicados en cada zona.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Primeros Auxilios</h3>
+                    <p>Puesto principal junto a la entrada.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Hidratación</h3>
+                    <p>Puntos de agua gratuita.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Accesibilidad</h3>
+                    <p>Rampas y áreas preferenciales.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Información</h3>
+                    <p>Stand de objetos perdidos y mapas.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-festival">
+        <p>&copy; 2026 Festival Cultural San José | U Cenfotec</p>
+    </footer>
+
+</body>
+</html>
