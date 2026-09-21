@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de control para expedición científica</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header class="header-principal">
+        <div class="header-info">
+            <h1>Expedición Bosque Nuboso 2026</h1> <!-- Debía de mostrar almenos el nombre de la expedición -->
+            <p class="ubicacion">Estación Biológica Monteverde</p> <!-- También debía mostrar la ubicación -->
+            <div class="estado-general"> 
+                <span>Día 4 de 7</span> <!-- El día actual también debía mostrarse pero no sabía cómo entonces mejor puse el mismo ejemplo del documento que era dia 4 de 7 -->
+            </div>
+        </div>
+
+        <nav class="nav-principal" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#resumen" class="active">Resumen</a></li>
+                <li><a href="#misiones">Misiones</a></li>
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#alertas">Alertas</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO COMPLETO, aqui voy a aplicar el grid para definir la distribucion de todo el documento y las diferentes areas -->
+    <main class="grid-dashboard">
+
+        <!-- Resumen de Operaciones -->
+        <section id="resumen" class="card-seccion resumen-seccion">
+            <h2>Resumen de Operaciones</h2>
+            <div class="kpi-container">
+                <article class="kpi-card kpi-destacado">
+                    <h3>Investigadores Activos</h3>
+                    <p class="kpi-numero">18</p>
+                </article>
+                <article class="kpi-card">
+                    <h3>Misiones en Progreso</h3>
+                    <p class="kpi-numero">3</p>
+                </article>
+                <article class="kpi-card">
+                    <h3>Misiones Completadas</h3>
+                    <p class="kpi-numero">1</p>
+                </article>
+                <article class="kpi-card kpi-alerta">
+                    <h3>Alertas Pendientes</h3>
+                    <p class="kpi-numero">4</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Alertas -->
+         <!-- Aunque en el documento por orden seguia misiones activas, es importante respetar un tema de jerarquia visual que se menciona en el documento, dentro de esto, yo Andres Melendez considero que alertas deberia de ir primero por un tema de urgencia o prioridades. -->
+        <section id="alertas" class="card-seccion alertas-seccion">
+            <h2>Alertas del Sistema</h2>
+            <div class="lista-alertas">
+                <article class="alerta-card alerta-critica">
+                    <header class="alerta-header">
+                        <span class="badge-nivel">Crítica</span>
+                        <time datetime="10:15">10:15 AM</time>
+                    </header>
+                    <h3>Sensor meteorológico sin conexión</h3>
+                    <p>Estación Meteorológica Sector Norte perdió señal de telemetría.</p>
+                </article>
+
+                <article class="alerta-card alerta-alta">
+                    <header class="alerta-header">
+                        <span class="badge-nivel">Alta</span>
+                        <time datetime="09:45">09:45 AM</time>
+                    </header>
+                    <h3>Lluvia intensa en sector norte</h3>
+                    <p>Precipitación superó los 45mm/h. Precaución en senderos.</p>
+                </article>
+
+                <article class="alerta-card alerta-media">
+                    <header class="alerta-header">
+                        <span class="badge-nivel">Media</span>
+                        <time datetime="09:00">09:00 AM</time>
+                    </header>
+                    <h3>Retraso en Misión M-02</h3>
+                    <p>Equipo de Hidrología reporta retraso por camino bloqueado.</p>
+                </article>
+
+                <article class="alerta-card alerta-info">
+                    <header class="alerta-header">
+                        <span class="badge-nivel">Informativa</span>
+                        <time datetime="08:00">08:00 AM</time>
+                    </header>
+                    <h3>Nivel bajo de batería</h3>
+                    <p>Dron de mapeo Geológico requiere recarga (15% restante).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Misiones Activas -->
+        <section id="misiones" class="card-seccion misiones-seccion">
+            <h2>Misiones Activas</h2>
+            <div class="lista-misiones">
+
+                <article class="mision-card">
+                    <div class="mision-header">
+                        <span class="badge-prioridad p-alta">Prioridad Alta</span>
+                        <span class="estado-tag estado-progreso">En progreso</span>
+                    </div>
+                    <h3>Monitoreo de anfibios</h3>
+                    <p><strong>Equipo:</strong> Biología</p>
+                    <p><strong>Ubicación:</strong> Sendero Norte</p>
+                    <p><strong>Horario:</strong> <time>08:30 - 11:30</time></p>
+                </article>
+
+                <article class="mision-card">
+                    <div class="mision-header">
+                        <span class="badge-prioridad p-alta">Prioridad Alta</span>
+                        <span class="estado-tag estado-progreso">En progreso</span>
+                    </div>
+                    <h3>Muestreo de cuencas</h3>
+                    <p><strong>Equipo:</strong> Hidrología</p>
+                    <p><strong>Ubicación:</strong> Río Cristal</p>
+                    <p><strong>Horario:</strong> <time>09:00 - 13:00</time></p>
+                </article>
+
+                <article class="mision-card">
+                    <div class="mision-header">
+                        <span class="badge-prioridad p-media">Prioridad Media</span>
+                        <span class="estado-tag estado-progreso">En progreso</span>
+                    </div>
+                    <h3>Registro barométrico</h3>
+                    <p><strong>Equipo:</strong> Meteorología</p>
+                    <p><strong>Ubicación:</strong> Torremontaña</p>
+                    <p><strong>Horario:</strong> <time>06:00 - 18:00</time></p>
+                </article>
+
+                <article class="mision-card">
+                    <div class="mision-header">
+                        <span class="badge-prioridad p-baja">Prioridad Baja</span>
+                        <span class="estado-tag estado-completada">Completada</span>
+                    </div>
+                    <h3>Escaneo fotogramétrico</h3>
+                    <p><strong>Equipo:</strong> Geología</p>
+                    <p><strong>Ubicación:</strong> Sector Cueva</p>
+                    <p><strong>Horario:</strong> <time>06:00 - 08:00</time></p>
+                </article>
+
+                <article class="mision-card">
+                    <div class="mision-header">
+                        <span class="badge-prioridad p-media">Prioridad Media</span>
+                        <span class="estado-tag estado-suspendida">Suspendida</span>
+                    </div>
+                    <h3>Conteo de flora epífita</h3>
+                    <p><strong>Equipo:</strong> Biología</p>
+                    <p><strong>Ubicación:</strong> Dosel Dos</p>
+                    <p><strong>Horario:</strong> <time>14:00 - 17:00</time></p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Equipos Científicos -->
+        <section id="equipos" class="card-seccion equipos-seccion">
+            <h2>Equipos Científicos</h2>
+            <div class="lista-equipos">
+                <article class="equipo-card">
+                    <h3>Equipo Biología</h3>
+                    <p><strong>Integrantes:</strong> 5 investigadores</p>
+                    <p><strong>Misión actual:</strong> Monitoreo de anfibios</p>
+                    <p><strong>Estado:</strong> En campo</p>
+                    <p class="proxima"><strong>Próxima act:</strong> Análisis en laboratorio (14:00)</p>
+                </article>
+
+                <article class="equipo-card">
+                    <h3>Equipo Hidrología</h3>
+                    <p><strong>Integrantes:</strong> 4 investigadores</p>
+                    <p><strong>Misión actual:</strong> Muestreo de cuencas</p>
+                    <p><strong>Estado:</strong> En traslado</p>
+                    <p class="proxima"><strong>Próxima act:</strong> Medición de caudal (15:00)</p>
+                </article>
+
+                <article class="equipo-card">
+                    <h3>Equipo Meteorología</h3>
+                    <p><strong>Integrantes:</strong> 3 investigadores</p>
+                    <p><strong>Misión estación:</strong> Registro barométrico</p>
+                    <p><strong>Estado:</strong> Base operando</p>
+                    <p class="proxima"><strong>Próxima act:</strong> Calibración de radar (13:00)</p>
+                </article>
+
+                <article class="equipo-card">
+                    <h3>Equipo Geología</h3>
+                    <p><strong>Integrantes:</strong> 4 investigadores</p>
+                    <p><strong>Misión actual:</strong> Standby</p>
+                    <p><strong>Estado:</strong> Recarga técnica</p>
+                    <p class="proxima"><strong>Próxima act:</strong> Muestreo de suelo (14:30)</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Próximas Actividades / Agenda -->
+        <aside id="agenda" class="card-seccion agenda-seccion">
+            <h2>Próximas Actividades</h2>
+            <ol class="timeline-actividades">
+                <li>
+                    <time>11:45 AM</time>
+                    <div>
+                        <strong>Reunión de sincronización</strong>
+                        <span>Todos los equipos</span>
+                    </div>
+                </li>
+                <li>
+                    <time>01:00 PM</time>
+                    <div>
+                        <strong>Calibración de radar</strong>
+                        <span>Meteorología</span>
+                    </div>
+                </li>
+                <li>
+                    <time>02:00 PM</time>
+                    <div>
+                        <strong>Análisis de muestras</strong>
+                        <span>Biología</span>
+                    </div>
+                </li>
+                <li>
+                    <time>02:30 PM</time>
+                    <div>
+                        <strong>Muestreo de suelo en Fila B</strong>
+                        <span>Geología</span>
+                    </div>
+                </li>
+                <li>
+                    <time>03:00 PM</time>
+                    <div>
+                        <strong>Medición de caudal en Río Seco</strong>
+                        <span>Hidrología</span>
+                    </div>
+                </li>
+            </ol>
+        </aside>
+
+    </main>
+
+    <footer class="footer-principal">
+        <p>&copy; 2026 - Centro de Control de Expediciones | U Cenfotec Tarea 1</p>
+    </footer>
+
+</body>
+</html>
