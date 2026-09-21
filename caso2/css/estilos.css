@@ -1,0 +1,303 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root {
+    /* Fondos y cartas */
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-card: #f1f5f9;
+    --color-border: #cbd5e1;
+    
+    /* Textos */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    
+    /* Identidad del Festival y Categorías */
+    --color-brand: #d97706;    
+    --color-live: #dc2626;  
+    --color-musica: #db2777;
+    --color-teatro: #7c3aed;
+    --color-infantil: #059669;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+/* Encabezado del Festival */
+.header-festival {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-content h1 {
+    font-size: 1.4rem;
+    color: var(--color-brand);
+    margin-bottom: 0.25rem;
+}
+
+.meta-info {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.nav-festival {
+    background-color: var(--color-surface);
+    margin-top: 1rem;
+    padding: 0.25rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.nav-festival ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 0.5rem 0 0 0;
+}
+
+.nav-festival a {
+    display: inline-block; /* Para que este uno al lado del otro pero que se comporten como bloque */
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    background-color: #e2e8f0;
+}
+
+.nav-festival a.active,
+.nav-festival a:hover {
+    background-color: var(--color-brand);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilos de Bloques */
+.seccion-bloque {
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-bloque h2 {
+    font-size: 1.2rem;
+    color: var(--color-brand);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.25rem;
+}
+
+/* SECCIÓN "AHORA" */
+.cards-ahora {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-ahora {
+    position: relative;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--color-live);
+}
+
+.badge-en-vivo {
+    position: absolute; /* Para colocarlo de manera mas facil en la esquina superior derecha, el absolute se hace con base al relative que pusimos arriba */
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--color-live);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    animation: pulse 2s infinite; 
+}
+
+/* Esto lo hice gracias a la ayuda de la IA ya que no me acordaba como hacer las animaciones y esta esta tenia la idea bastante especifica*/
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.categoria {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+}
+
+.cat-musica { background-color: var(--color-musica); color: white; }
+.cat-teatro { background-color: var(--color-teatro); color: white; }
+.cat-infantil { background-color: var(--color-infantil); color: white; }
+
+.escenario {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.horario {
+    font-weight: bold;
+    color: var(--color-brand);
+}
+
+/* CAMBIOS Y AVISOS */
+.lista-cambios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.aviso-card {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tipo-aviso {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-brand);
+}
+
+/* PRÓXIMAS ACTIVIDADES, PROGRAMACIÓN Y SERVICIOS */
+.lista-proximas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-proxima {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.item-proxima time {
+    font-weight: bold;
+    color: var(--color-brand);
+    font-size: 0.9rem;
+}
+
+.grid-escenarios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.col-escenario {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.col-escenario h3 {
+    font-size: 1rem;
+    color: var(--color-brand);
+    margin-bottom: 0.5rem;
+}
+
+.slot-actividad {
+    border-bottom: 1px dashed var(--color-border);
+    padding: 0.25rem 0;
+}
+
+.slot-actividad.activo {
+    border-right: 6px solid var(--color-live);
+    padding-left: 0.25rem;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.servicio-card {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.footer-festival {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLETA (601px a 1023px) */
+@media (min-width: 601px) {
+    .cards-ahora {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-escenarios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ESCRITORIO (1024px o más) */
+@media (min-width: 1024px) {
+    .layout-festival {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "ahora      cambios"
+            "escenarios proximas"
+            "- servicios";
+        gap: 1.5rem;
+    }
+
+    .ahora-container      { grid-area: ahora; }
+    .cambios-container    { grid-area: cambios; }
+    .escenarios-container { grid-area: escenarios; }
+    .proximas-container   { grid-area: proximas; }
+    .servicios-container  { grid-area: servicios; }
+
+    .grid-escenarios {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body {
+        padding: 1.5rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
