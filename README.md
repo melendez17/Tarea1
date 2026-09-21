@@ -1,6 +1,8 @@
 
 # Tarea 1: Construcción de Interfaces Web Adaptables con HTML y CSS
 
+Aclaración: Olvidé por completo el tiempo para los commits y que debían ser distribuidos en 3 días distintos y la diferente cantidad de commits, cometí el error y lo hice todo de una vez, es por esto que hay tan poquita diferencia entre cada uno de los commits, porque volví a realizar otro repositorio para poder distribuirlo en los diferentes commits (se puede ver también el tiempo de creación del repo) sin embargo, cualquier parte del trabajo podría explicarlo
+
 ## Identificación
 * **Nombre del estudiante:** Andrés Meléndez Carvajal
 * **Curso:** Programación Web Avanzada (SOFT-12)
