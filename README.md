@@ -73,6 +73,11 @@ El proyecto se desarrolló bajo el enfoque **Mobile-First**, diseñando primero 
 En cuanto a los estilos, se configuró un tema claro utilizando **variables CSS (`:root`) exclusivamente para la paleta de colores** (fondos, superficies, bordes y tonos semánticos para categorías). De esta manera se garantiza un alto contraste y una gestión de color centralizada y fácil de mantener, mientras que los valores de espaciados, bordes y tipografías se manejaron con unidades fijas (`rem` y `px`) para mantener un código directo, limpio y eficiente.
 
 ## Tabla Resumen de comits
+
+## Tabla Resumen de comits
+
+| Fecha | Commit | Descripción |
+|---|---|---|
 | 2026-09-20 | 886c753 | Estilos completos para el html del caso 2, añadido |
 | 2026-09-20 | 1284cdc | Estructura completa del html del caso 2 añadida |
 | 2026-09-20 | 68818c7 | Estilos del caso 1 añadidos |
